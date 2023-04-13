@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:51:23 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/11 21:27:16 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:04:22 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	index;
-	unsigned int	lendest;
-	unsigned int	lensrc;
+	size_t	index;
+	size_t	lendest;
+	size_t	lensrc;
 
 	lendest = ft_strlen(dest);
 	lensrc = ft_strlen(src);
