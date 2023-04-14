@@ -6,24 +6,23 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 17:48:39 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/13 15:59:10 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 20:26:28 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-/*char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (big[i] && i < len)
+	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j] && big[i + j] != '\0')
+		while (big[i + j] == little[j] && big[i + j] != '\0'
+			&& i + j < len)
 		{
 			if (little[j + 1] == '\0')
 			{
@@ -35,11 +34,10 @@
 	}
 	return (NULL);
 }
-*/
 
-int	main(void)
+/*int	main(void)
 {
 	char	teste[] = "hello fucking world";
 	char	tofind[] = "fu";
-	printf("%s\n", strnstr(teste, tofind, 10));
-}
+	printf("%s\n", ft_strnstr(teste, tofind, 5));
+}*/
