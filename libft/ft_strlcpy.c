@@ -11,13 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	index;
-	size_t	lensrc = 0;
+	size_t	lensrc;
 
 	index = 0;
 	lensrc = ft_strlen(src);
@@ -32,7 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}	
 	return (lensrc);
 }
-
 
 /*int	main(void)
 {
