@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:51:23 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/12 16:04:22 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/17 17:25:47 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	printf("%s\n", src);
 	//ft_strlcat(dest, src, 2);
 	printf("%s\n", dest);
-	printf("%d\n", ft_strlcat(dest, src, 16));
+	printf("%d\n", ft_strlcat((void *)0, src, 9));
 	printf("After: %s\n", src);
 	printf("After: %s\n", dest);
 }*/
