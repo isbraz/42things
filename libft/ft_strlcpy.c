@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 16:40:20 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/12 18:14:25 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:05:46 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	index = 0;
 	lensrc = ft_strlen(src);
-	if (size != 0)
+	if (size <= 0)
+		return (lensrc);
+	while (src[index] != '\0' && index < size - 1)
 	{
-		while (src[index] != '\0' && index < size)
-		{
-			dst[index] = src[index];
-			index++;
-		}
-		dst[index] = '\0';
-	}	
+		dst[index] = src[index];
+		index++;
+	}
+	dst[index] = '\0';
 	return (lensrc);
 }
 
@@ -36,6 +35,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	char	dest[] = "Hello";
 	char	src[] = "World";
 
-	printf("%d\n", strlcpy(dest, src, 10));
+	printf("%s\n", dest);
+	printf("%ld\n", ft_strlcpy(dest, src, 5));
+	printf("%s\n", dest);
 
 }*/

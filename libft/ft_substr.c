@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:46:05 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/14 18:18:58 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/15 18:21:13 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 		newstr = (char *)malloc(sizeof(char) * (ft_strlen(s) - start + 1));
 	if (!(newstr))
-		return (NULL);	
+		return (NULL);
 	while (s[start] && index < len)
-		newstr[index++] = s[start++];			
+		newstr[index++] = s[start++];
 	newstr[index] = '\0';
 	return (newstr);
 }

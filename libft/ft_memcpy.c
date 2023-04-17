@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 17:19:26 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/13 20:18:40 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 11:36:32 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	d = dest;
 	s = src;
 	i = 0;
+	if (!(dest) && !(src))
+	{
+		return (NULL);
+	}
 	while (i < n)
 	{
 		d[i] = s[i];

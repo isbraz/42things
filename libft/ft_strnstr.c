@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 17:48:39 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/13 20:26:28 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 11:53:45 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
+	if (!(little))
+		return (NULL);
+	if (*little == '\0')
+		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
@@ -25,9 +29,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			&& i + j < len)
 		{
 			if (little[j + 1] == '\0')
-			{
 				return ((char *)&big[i]);
-			}
 			j++;
 		}
 		i++;

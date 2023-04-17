@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:56:08 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/13 20:25:54 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 13:09:13 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,24 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == ((char)c))
 		{
 			return ((char *)&s[i]);
 		}
 		i++;
+	}
+	if (s[i] == ((char)c))
+	{
+		return ((char *)&s[i]);
 	}
 	return (NULL);
 }
 
 /*int	main(void)
 {
-	const char	*teste = "Hello World";
+	const char	*teste = "eu sou palmeiraz";
 
-	printf("%s\n", strchr(teste, 120));
-	printf("%s\n", ft_strchr(teste, 120));
+	//printf("%s\n", strchr(teste, 65));
+	//printf("%s\n", ft_strchr_before(teste, 65));
+	aleatorio();
 }*/

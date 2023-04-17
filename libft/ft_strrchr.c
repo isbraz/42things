@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 21:42:06 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/12 16:37:30 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 12:02:20 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	last_pos;
+	int	last_pos;
 
-	last_pos = ft_strlen(s) - 1;
+	last_pos = ft_strlen(s);
 	while (last_pos >= 0)
 	{
-		if (last_pos == c)
+		if (s[last_pos] == ((char)c))
 		{
-			return ((char *)s + s[last_pos]);
+			return ((char *)&s[last_pos]);
 		}
 		last_pos--;
 	}

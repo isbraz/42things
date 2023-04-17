@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:57:01 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/13 21:12:27 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:51:29 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,11 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		index;
 	char	*dupstr;
 
 	dupstr = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!(dupstr))
 		return (NULL);
-	while (s[index])
-	{
-		dupstr[index] = s[index];
-		index++;
-	}
+	ft_memcpy(dupstr, s, ft_strlen(s) + 1);
 	return (dupstr);
 }

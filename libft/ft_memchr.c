@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 21:20:45 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/13 21:35:08 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:30:57 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == ((char)c))
 		{
 			return ((void *)&str[i]);
 		}

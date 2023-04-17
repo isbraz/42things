@@ -6,15 +6,15 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 23:49:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/14 17:27:06 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/16 13:17:16 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int			ft_isalpha(int c);
 int			ft_isalnum(int c);
@@ -40,6 +40,5 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
-
 
 #endif
