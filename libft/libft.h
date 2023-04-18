@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 23:49:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/17 15:41:49 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/18 18:10:57 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void		*ft_memmove(void *dest, const void *src, size_t n);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_itoa(int n);
 
 #endif
