@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 21:34:11 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/18 19:37:50 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/18 19:49:26 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (NULL);
 	if (dst <= sc || dst >= (sc + n))
 	{
-		while (i < n)
-		{
-			dst[i] = sc[i];
-			i++;
-		}
+		ft_memcpy(dest, src, n);
 	}
 	else
 	{
