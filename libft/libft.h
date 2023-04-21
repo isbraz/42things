@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 23:49:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/20 23:25:51 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/21 13:55:17 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void 	*content;
+	struct 	s_list *next;
+} 		t_list;
 
 int			ft_isalpha(int c);
 int			ft_isalnum(int c);
