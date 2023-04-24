@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 13:59:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/21 15:06:37 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/21 16:09:29 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*newnode;
-	
+
 	newnode = (t_list *)malloc(sizeof(newnode));
 	if (!newnode)
 		return (NULL);
