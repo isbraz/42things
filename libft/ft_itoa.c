@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:35:41 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/18 19:21:35 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/24 19:01:40 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ static long	ft_count_dig(long n)
 
 	i = 0;
 	if (n < 0)
+	{
 		n *= -1;
+		i++;
+	}
 	if (n == 0)
 		return (1);
 	while (n > 0)
@@ -101,20 +104,13 @@ char	*ft_itoa(int n)
 
 	number = n;
 	i = ft_count_dig(number);
-	if (n < 0)
-	{
-		str = (char *)malloc(sizeof(char) * i + 2);
-		if (str == NULL)
-			return (NULL);
+	str = (char *)malloc(sizeof(char) * i + 1);
+	if (str == NULL)
+		return (NULL);
+	else if (n < 0)
 		ft_is_neg(number, str);
-	}
-	if (n >= 0)
-	{
-		str = (char *)malloc(sizeof(char) * i + 1);
-		if (str == NULL)
-			return (NULL);
+	else if (n >= 0)
 		ft_is_pos(number, str);
-	}
 	return (str);
 }
 
