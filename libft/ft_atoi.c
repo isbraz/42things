@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:36:56 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/16 13:50:16 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:23:12 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,21 @@
 static int	ft_isspace(const char c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
-	{
 		return (1);
-	}
 	return (0);
 }
 
 static int	ft_isnum(const char c)
 {
 	if (c >= 48 && c <= 57)
-	{
 		return (1);
-	}
 	return (0);
 }
 
 static int	ft_operator(const char c)
 {
 	if (c == '+' || c == '-')
-	{
 		return (1);
-	}
 	return (0);
 }
 
