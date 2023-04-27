@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:32:49 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/17 17:27:11 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/04/26 16:58:29 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
+
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char const *s1 = "hello world my friend";
+	char const *set = "hello friend";
+	
+	printf("%s\n",ft_strtrim(s1, set));
+}
+*/
