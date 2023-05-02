@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 15:50:22 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/28 17:20:13 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/02 23:47:46 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_putnbr(int number)
 	return (c);
 }
 
-
+/*
 int	main(void)
 {
 	int	number = 90;
@@ -67,3 +67,4 @@ int	main(void)
 	ft_putnbr(number);
 	printf("\n%d\n", ft_putnbr(number));
 }
+*/

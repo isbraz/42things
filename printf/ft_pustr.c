@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 16:46:24 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/28 18:09:39 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/02 23:42:08 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
-		return (NULL);
+		return (0);
 	while (str[i])
 	{
 		ft_putchar(str[i]);
