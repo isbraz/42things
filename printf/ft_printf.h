@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:34:32 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/02 23:38:35 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:57:37 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_putchar(int c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int number);
 int	ft_putunsnb(unsigned int number);
-int	ft_hexdec(unsigned int n, char type);
+int	ft_hexdec(unsigned long int n, char type);
 int	ft_adress(void *adress);
 
 #endif

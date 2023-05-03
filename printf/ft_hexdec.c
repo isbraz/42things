@@ -6,14 +6,14 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 11:14:56 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/02 19:54:53 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:56:23 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	ft_hexdec(unsigned int n, char type)
+int	ft_hexdec(unsigned long int n, char type)
 {
 	char	*base;
 	int	c;
@@ -21,7 +21,7 @@ int	ft_hexdec(unsigned int n, char type)
 	c = 0;
 	if (type == 'x')
 		base = LOW_HEX;
-	else if (type == 'X')
+	if (type == 'X')
 		base = UPP_HEX;
 	if (n >= 16)
 	{

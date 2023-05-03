@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:34:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/03 00:11:46 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:46:03 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,20 @@ int	ft_printf(const char  *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			c += ft_type(str[i + 1], args);
+			c += ft_type(str[++i], args);
+			i++;
 			continue;
-	 	}
-		i++;
+		}
+		c += ft_putchar(str[i++]);
 	}
-	va_end(args);
 	return (c);
 }
 
 int	main(void)
 {
-	char	*teste = "ismadograu";
+	char	teste = 'c';
+	char	teste2 = 'd';
 	
-	ft_printf("%p\n", teste);
-	printf("%p\n", teste);
+	printf("%c%c\n", teste, teste2);
+	ft_printf("%c%c\n", teste, teste2);
 }
