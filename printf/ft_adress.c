@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_adress.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 19:52:32 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/03 16:03:26 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:06:28 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_adress(void *adress)
 {
-	char	*base;
-	unsigned int	c;
-	unsigned long int 	ad;
+	char				*base;
+	unsigned long int	ad;
+	unsigned int		c;
 
 	base = LOW_HEX;
 	c = 0;

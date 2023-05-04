@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hexdec.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 11:14:56 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/03 15:56:23 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:07:38 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	ft_hexdec(unsigned long int n, char type)
 {
 	char	*base;
-	int	c;
+	int		c;
 
 	c = 0;
 	if (type == 'x')

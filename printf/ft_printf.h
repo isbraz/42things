@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:34:32 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/03 15:57:37 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:13:56 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-# define FT_PRINT_H
-
+# define FT_PRINTF_H
 # define LOW_HEX "0123456789abcdef" 
 # define UPP_HEX "0123456789ABCDEF"
 
@@ -20,7 +19,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int	ft_printf(const char  *, ...);
+int	ft_printf(const char *str, ...);
 int	ft_putchar(int c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int number);

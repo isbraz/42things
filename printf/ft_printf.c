@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:34:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/04 15:47:24 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:12:23 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ static int	ft_type(char type, va_list args)
 	return (c);
 }
 
-int	ft_printf(const char  *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	args;
-	int	c;
-	int	i;
+	int		c;
+	int		i;
 
 	i = 0;
 	c = 0;
@@ -50,13 +50,14 @@ int	ft_printf(const char  *str, ...)
 		{
 			c += ft_type(str[++i], args);
 			i++;
-			continue;
+			continue ;
 		}
 		c += ft_putchar(str[i++]);
 	}
 	return (c);
 }
 
+/*
 int	main(void)
 {
 	unsigned int	teste = -48;
@@ -64,4 +65,4 @@ int	main(void)
 	
 	//printf("%u\n", teste, teste2);
 	ft_printf("%u\n", teste, teste2);
-}
+}*/

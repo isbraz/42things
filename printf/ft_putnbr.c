@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 15:50:22 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/02 23:47:46 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:09:08 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_putnbr(int number)
 	else if (number < 0)
 	{
 		number *= -1;
-		ft_putchar ('-'); 
+		ft_putchar ('-');
 		ft_putnbr(number);
 	}
 	else if (number > 9)
