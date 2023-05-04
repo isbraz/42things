@@ -12,38 +12,21 @@
 
 #include "ft_printf.h"
 
-static int	ft_count_digits(int number)
-{
-	int	i;
-
-	i = 0;
-	if (number < 0)
-	{
-		number *= -1;
-		i++;
-	}
-	if (number == 0)
-		return (1);
-	while (number > 0)
-	{
-		number /= 10;
-		i++;
-	}
-	return (i);
-}
-
 int	ft_putunsnb(unsigned int number)
 {
 	int	c;
 
-	c = ft_count_digits(number);
+	c = 0;
 	if (number > 9)
 	{
-		ft_putunsnb(number / 10);
-		ft_putunsnb(number % 10);
+		c += ft_putunsnb(number / 10);
+		c += ft_putunsnb(number % 10);
 	}
 	else
+	{
 		ft_putchar(number + 48);
+		c++;
+	}
 	return (c);
 }
 

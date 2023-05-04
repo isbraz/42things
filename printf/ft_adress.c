@@ -14,11 +14,9 @@
 
 int	ft_adress(void *adress)
 {
-	char				*base;
 	unsigned long int	ad;
 	unsigned int		c;
 
-	base = LOW_HEX;
 	c = 0;
 	ad = (unsigned long int)adress;
 	if (!adress)
