@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:34:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/03 16:46:03 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/04 15:47:24 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ int	ft_printf(const char  *str, ...)
 
 int	main(void)
 {
-	char	teste = 'c';
-	char	teste2 = 'd';
+	unsigned int	teste = -48;
+	unsigned int	teste2 = -48;
 	
-	printf("%c%c\n", teste, teste2);
-	ft_printf("%c%c\n", teste, teste2);
+	//printf("%u\n", teste, teste2);
+	ft_printf("%u\n", teste, teste2);
 }
