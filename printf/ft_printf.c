@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 15:34:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/04 16:12:23 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:32:09 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_type(char type, va_list args)
 	else if (type == 'u')
 		c += ft_putunsnb(va_arg(args, unsigned int));
 	else if (type == 'x' || type == 'X')
-		c += ft_hexdec(va_arg(args, unsigned int), type);
+		c += ft_hexdec(va_arg(args, unsigned long int), type);
 	else if (type == 'p')
 		c += ft_adress(va_arg(args, void *));
 	return (c);
@@ -60,9 +60,9 @@ int	ft_printf(const char *str, ...)
 /*
 int	main(void)
 {
-	unsigned int	teste = -48;
-	unsigned int	teste2 = -48;
+	unsigned int	teste = 4294967295;
 	
-	//printf("%u\n", teste, teste2);
-	ft_printf("%u\n", teste, teste2);
-}*/
+	printf("%p\n", &teste);
+	ft_printf("%p\n", &teste);
+}
+*/
