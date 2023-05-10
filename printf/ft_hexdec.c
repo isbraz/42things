@@ -6,12 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 11:14:56 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/08 16:18:31 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/09 14:21:05 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_hexdec(unsigned long int n, char type)
 {
