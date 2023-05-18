@@ -55,8 +55,8 @@ int	ft_is_newline(char *buffer)
 {
 	size_t	i;
 	size_t	j;
-	int	check;
-	
+	int		check;
+
 	i = 0;
 	j = 0;
 	check = 0;
@@ -66,7 +66,7 @@ int	ft_is_newline(char *buffer)
 		{
 			check = 1;
 			i++;
-			break;
+			break ;
 		}
 		i++;
 	}

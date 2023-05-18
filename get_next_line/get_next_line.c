@@ -16,8 +16,8 @@
 char	*get_next_line(int fd)
 {
 	static char	buff[BUFFER_SIZE + 1];
-	char	*line;
-	size_t	i;
+	char		*line;
+	size_t		i;
 
 	i = 0;
 	line = NULL;
@@ -34,11 +34,12 @@ char	*get_next_line(int fd)
 	{
 		line = ft_strjoin(line, buff);
 		if (ft_is_newline(buff))
-			break;
+			break ;
 	}
 	return (line);
 }
 
+/*
 int main(void)
 {
 	int fd;
@@ -57,4 +58,4 @@ int main(void)
 	}
 	close(fd);
 	return 0;
-}
+}*/

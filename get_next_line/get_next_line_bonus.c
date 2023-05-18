@@ -15,24 +15,24 @@
 
 char	*get_next_line(int fd)
 {
-	static char	buff[1000][BUFFER_SIZE + 1];
-	char	*line;
-	size_t	i;
+	static char	buff[FOPEN_MAX][BUFFER_SIZE + 1];
+	char		*line;
+	size_t		i;
 
 	i = 0;
 	line = NULL;
 	if (BUFFER_SIZE < 1 || read(fd, 0, 0) < 0)
 	{
-		if (fd >= 0 && fd <= 1000)
+		if (fd >= 0 && fd <= FOPEN_MAX)
 			while (buff[fd][i])
 				buff[fd][i++] = 0;
 		return (0);
 	}
-	while (buff[0] || read(fd, buff[fd], BUFFER_SIZE))
+	while (buff[fd][0] || read(fd, buff[fd], BUFFER_SIZE))
 	{
 		line = ft_strjoin(line, buff[fd]);
 		if (ft_is_newline(buff[fd]))
-			break;
+			break ;
 	}
 	return (line);
 }
