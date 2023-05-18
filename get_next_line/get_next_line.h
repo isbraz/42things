@@ -6,13 +6,15 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 19:03:43 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/09 18:53:38 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/16 20:16:08 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFFER_SIZE 0
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 42
+#endif
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -21,5 +23,7 @@
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
+char	*ft_strjoin(char *line, char *buffer);
+int	ft_is_newline(char *buffer);
 
 #endif

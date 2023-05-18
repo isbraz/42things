@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 18:46:38 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/04/26 18:00:23 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/05/11 18:15:13 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,6 @@ $(NAME) : $(OBJS)
 clean:
 	rm -f $(OBJS) $(BONUS_CONV)
 	
-
 fclean: clean
 	rm -f $(NAME)
 
