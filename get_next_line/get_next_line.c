@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 19:03:33 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/16 20:07:24 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/05/18 13:01:39 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*get_next_line(int fd)
 	size_t	i;
 
 	i = 0;
+	line = NULL;
 	if (BUFFER_SIZE < 1 || read(fd, 0, 0) < 0)
 	{
 		while (buff[i])
@@ -29,7 +30,6 @@ char	*get_next_line(int fd)
 		}
 		return (0);
 	}
-	line = NULL;
 	while (buff[0] || read(fd, buff, BUFFER_SIZE))
 	{
 		line = ft_strjoin(line, buff);
@@ -38,7 +38,6 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
-
 
 int main(void)
 {
