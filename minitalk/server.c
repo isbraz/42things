@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 18:57:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/07/11 15:46:52 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/07/11 17:28:09 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	signal_handler(int sig)
 	int	b;
 	char	c;
 
+	if (!str[0])
+		i = 0;
 	if (sig == 10)
 	{
 		str[i] = '1';
