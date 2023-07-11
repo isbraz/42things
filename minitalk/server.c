@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 18:57:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/06/23 16:59:12 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/07/11 15:46:52 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	ft_convert_bin_to_number(char *str)
+static int	ft_convert_bin_to_number(char *str)
 {
 	int	i;
 	int	j;
@@ -40,7 +40,6 @@ void	signal_handler(int sig)
 	int	b;
 	char	c;
 
-	i = 0;
 	if (sig == 10)
 	{
 		str[i] = '1';
@@ -56,6 +55,7 @@ void	signal_handler(int sig)
 		str[i] = '\0';
 		b = ft_convert_bin_to_number(str);
 		c = (char)b;
+		i = 0;
 		write(1, &c, 1);
 	}
 }
