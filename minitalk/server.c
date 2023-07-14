@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 18:57:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/07/11 17:28:09 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:23:14 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ static int	ft_convert_bin_to_number(char *str)
 	int	n;
 	char	*aux;
 
-	i = 0;
 	n = 0;
 	j = 0;
 	aux = str;
-	while (aux[i])
-		i++;
+	i = ft_strlen(aux);
 	while (j < i)
 	{
 		n = (n * 2) + (aux[j] - '0');
@@ -65,12 +63,15 @@ void	signal_handler(int sig)
 int	main(void)
 {
 	int	p;
+	char	*sp;
 
 	p = getpid();
+	sp = ft_itoa(p);
 	signal(SIGUSR1, signal_handler);
 	signal(SIGUSR2, signal_handler);
-	printf("pid: %d\n", p);
-	printf("waiting for message ...\n");
+	write(1, "pid:", 4);
+	write(1, sp, ft_strlen(sp));
+	write(1, "\n waiting for message...\n", 25);
 	while (1)
 	{
 		sleep(1);

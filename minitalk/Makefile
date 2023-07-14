@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
+#    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/11 14:45:58 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/07/11 15:28:58 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/07/12 12:31:31 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-server: server.c utils.c
+server: server.c utils.c utils2.c
 	$(CC) $(CFLAGS) -o $@ $^
 
 client: client.c utils.c utils2.c
