@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 18:57:09 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/07/12 12:23:14 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/07/16 14:01:10 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	ft_convert_bin_to_number(char *str)
 {
-	int	i;
-	int	j;
-	int	n;
+	int		i;
+	int		j;
+	int		n;
 	char	*aux;
 
 	n = 0;
@@ -31,25 +31,22 @@ static int	ft_convert_bin_to_number(char *str)
 	return (n);
 }
 
-void	signal_handler(int sig)
+void	signal_handler(int sig, siginfo_t *info, void *context)
 {
 	static char	str[9];
 	static int	i;
-	int	b;
-	char	c;
+	int			b;
+	char		c;
+	int			sp;
 
+	(void)context;
+	sp = info->si_pid;
 	if (!str[0])
 		i = 0;
 	if (sig == 10)
-	{
-		str[i] = '1';
-		i++;
-	}
+		str[i++] = '1';
 	else
-	{
-		str[i] = '0';
-		i++;
-	}
+		str[i++] = '0';
 	if (i == 8)
 	{
 		str[i] = '\0';
@@ -57,18 +54,22 @@ void	signal_handler(int sig)
 		c = (char)b;
 		i = 0;
 		write(1, &c, 1);
+		kill(sp, SIGUSR1);
 	}
 }
 
 int	main(void)
 {
-	int	p;
-	char	*sp;
+	struct sigaction	sa;
+	int					p;
+	char				*sp;
 
+	sa.sa_flags = SA_SIGINFO;
+	sa.sa_sigaction = signal_handler;
+	sigaction(SIGUSR1, &sa, 0);
+	sigaction(SIGUSR2, &sa, 0);
 	p = getpid();
 	sp = ft_itoa(p);
-	signal(SIGUSR1, signal_handler);
-	signal(SIGUSR2, signal_handler);
 	write(1, "pid:", 4);
 	write(1, sp, ft_strlen(sp));
 	write(1, "\n waiting for message...\n", 25);
