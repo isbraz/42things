@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/24 11:32:35 by isbraz-d         ###   ########.fr       */
+/*   Created: 2023/08/21 20:49:36 by isbraz-d          #+#    #+#             */
+/*   Updated: 2023/08/22 14:34:22 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "so_long.h"
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
-
-typedef struct s_map
+int	main(int ac, char **argv)
 {
-	char	**map;
-	int	col;
-	int	line;
-	int	nlines;
-	int	p = 0;
-	int	c = 0;
-	int	e = 0;
-}		t_map;
+	t_map	map;
 
-
-
-#include "minilibx-linux/mlx.h"
-#include "libft/get_next_line.h"
-#include "libft/libft.h"
-
-void	ft_alocate_map(t_map *map, char *map_name);
-
-
-# endif
+	ft_memset(&map, 0, sizeof(t_map));
+	ft_alocate_map(&map, argv[1]);
+	/*while (map.map[i])
+	{
+		printf("%s", map.map[i]);
+		i++;
+	}*/
+}

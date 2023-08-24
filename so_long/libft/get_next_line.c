@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 19:03:33 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/05/18 13:01:39 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/22 14:05:24 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*get_next_line(int fd)
 	}
 	while (buff[0] || read(fd, buff, BUFFER_SIZE))
 	{
-		line = ft_strjoin(line, buff);
+		line = strjoin_ft(line, buff);
 		if (ft_is_newline(buff))
 			break ;
 	}

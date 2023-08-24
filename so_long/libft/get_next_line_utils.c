@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 13:21:13 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/18 14:53:31 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/22 14:06:20 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*strjoin_ft(char *line, char *buffer)
 	index2 = 0;
 	if (buffer[0] == 0)
 		return (0);
-	new_line = malloc(ft_strlen(line) + ft_strlen(buffer) + 1);
+	new_line = malloc(strlen_ft(line) + strlen_ft(buffer) + 1);
 	if (!new_line)
 		return (0);
 	while (line && line[index1])
