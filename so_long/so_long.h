@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/24 11:32:35 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/25 12:10:17 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,11 @@ typedef struct s_map
 	int	e = 0;
 }		t_map;
 
-
-
 #include "minilibx-linux/mlx.h"
 #include "libft/get_next_line.h"
 #include "libft/libft.h"
 
 void	ft_alocate_map(t_map *map, char *map_name);
-
+int	ft_map_validations(t_map map);
 
 # endif

@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   save_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:06:15 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/23 12:47:47 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/25 12:03:22 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-
 static int	ft_count_lines(int fd, char *map_name)
 {
-	int	i;
+	int		i;
 	char	*line;
 
 	i = 1;
@@ -43,12 +42,12 @@ void	ft_alocate_map(t_map *map, char *map_name)
 
 	i = 0;
 	map->nlines = ft_count_lines(fd, map_name);
-	map->map = malloc(sizeof(char*) * (map->nlines + 1));
-	fd = open(map_name, O_RDONLY);
+	map->map = malloc(sizeof(char *) * (map->nlines + 1));
+	fd = open (map_name, O_RDONLY);
 	if (fd < 0)
 	{
 		ft_putstr_fd("error", 2);
-		return;
+		return ;
 	}
 	while (i < map->nlines)
 	{
