@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/25 12:10:17 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:13:54 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ typedef struct s_map
 	int	col;
 	int	line;
 	int	nlines;
-	int	p = 0;
-	int	c = 0;
-	int	e = 0;
+	int	p;
+	int	c;
+	int	e;
 }		t_map;
 
 #include "minilibx-linux/mlx.h"

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 20:49:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/22 14:34:22 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:49:57 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	main(int ac, char **argv)
 
 	ft_memset(&map, 0, sizeof(t_map));
 	ft_alocate_map(&map, argv[1]);
+	ft_map_validations(map);
 	/*while (map.map[i])
 	{
 		printf("%s", map.map[i]);

@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:06:15 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/25 12:03:22 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/28 14:39:26 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_count_lines(int fd, char *map_name)
 	fd = open(map_name, O_RDONLY);
 	if (fd < 0)
 	{
-		ft_putstr_fd("error", 2);
+		ft_putstr_fd("error\n", 2);
 		return (0);
 	}
 	line = get_next_line(fd);
@@ -52,7 +52,6 @@ void	ft_alocate_map(t_map *map, char *map_name)
 	while (i < map->nlines)
 	{
 		map->map[i] = get_next_line(fd);
-		printf("%s", map->map[i]);
 		i++;
 	}
 	map->map[i] = NULL;
