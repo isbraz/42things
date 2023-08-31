@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:10:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/31 12:22:20 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/08/31 13:13:43 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,11 @@ int	ft_map_validations(t_map map)
 	ft_first_and_last_line(map);
 	if (ft_is_line_equal(map) && ft_first_and_last_line(map)
 	 	&& ft_check_position(map) && ft_check_content(map))
-	 	return (1);
+	{
+		printf("is line equal %d\n", ft_is_line_equal(map));
+		printf("check content %d\n", ft_check_content(map));
+		return (1);
+	}
 	ft_putstr_fd("error\n", 2);
 	return (0);
 }
