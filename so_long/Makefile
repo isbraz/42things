@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
+#    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/08/21 20:49:24 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/01 16:22:23 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
-SRCS = check_map.c 
+SRCS = check_map.c save_map.c
 
 OBJS = 
 
