@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:10:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/31 13:13:43 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/03 12:43:46 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 static int	ft_first_and_last_line(t_map map)
 {
-	int	i;
-	int	j;
-	int	l;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
@@ -59,9 +58,9 @@ static int	ft_check_content(t_map map)
 
 static int	ft_check_position(t_map map)
 {
-	int	i;
-	int	j;
-	int	l;
+	size_t	i;
+	size_t	j;
+	size_t	l;
 
 	i = 0;
 	j = 0;
@@ -78,29 +77,32 @@ static int	ft_check_position(t_map map)
 
 static int	ft_is_line_equal(t_map map)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = ft_strlen(map.map[0]);
 	while (ft_strlen(map.map[i]) == j)
 		i++;
-	if (map.map[i] == NULL || ft_strlen(map.map[i - 1]) == j)
+	if (map.map[i] == NULL || ft_strlen(map.map[i]) == j - 1)
 		return (1);
 	return (0);
 }
 
 int	ft_map_validations(t_map map)
 {
-	ft_is_line_equal(map);
-	ft_first_and_last_line(map);
 	if (ft_is_line_equal(map) && ft_first_and_last_line(map)
 	 	&& ft_check_position(map) && ft_check_content(map))
 	{
-		printf("is line equal %d\n", ft_is_line_equal(map));
-		printf("check content %d\n", ft_check_content(map));
+		printf("deu certo!");
+		//printf("first and last line : %d\n", ft_first_and_last_line(map));
+		//printf("check content %d\n", ft_check_content(map));
+		//printf("check position : %d\n", ft_check_position(map));
 		return (1);
 	}
+	//printf("first and last line : %d\n", ft_first_and_last_line(map));
+	//printf("check content %d\n", ft_check_content(map));
+	//printf("check position : %d\n", ft_check_position(map));
 	ft_putstr_fd("error\n", 2);
 	return (0);
 }
