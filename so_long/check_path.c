@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   check_path.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 18:06:32 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/04 17:33:47 by isbraz-d         ###   ########.fr       */
+/*   Created: 2023/09/03 13:09:03 by isbraz-d          #+#    #+#             */
+/*   Updated: 2023/09/03 13:59:12 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "so_long.h"
 
-int	ft_strlen(const char *s)
+void	ft_check_path(int x, int y, t_map map)
 {
-	int	i;
-	int	f;
-
-	i = 0;
-	f = 0;
-	if (s == NULL)
-		return (0);
-	while (s[i] != '\0')
-	{
-		if (s[i] == '\n')
-			f = -1;
-		i++;
-	}
-	return (i - f);
+	char	**map_clone;
+	
+	map_clone = ft_strdup(map.map);
+	
 }

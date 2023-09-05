@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 18:46:38 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/08/18 14:52:03 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/05 16:04:29 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,17 +32,17 @@ CFLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME) : $(OBJS)
-	ar -crs $(NAME) $(OBJS)
+	@ar -crs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS) $(BONUS_CONV)
+	@rm -f $(OBJS) $(BONUS_CONV)
 	
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
 bonus: $(OBJS) $(BONUS_CONV)
-	ar -crs   $(NAME) $(OBJS) $(BONUS_CONV) 
+	@ar -crs   $(NAME) $(OBJS) $(BONUS_CONV) 
 	
 

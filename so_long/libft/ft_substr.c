@@ -6,16 +6,16 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 13:46:05 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/04/15 18:21:13 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:15:41 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, int start, int len)
 {
 	char	*newstr;
-	size_t	index;
+	int	index;
 
 	index = 0;
 	if (!(s))

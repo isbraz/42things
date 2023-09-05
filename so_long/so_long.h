@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/08/30 17:26:17 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/04 17:54:29 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ typedef struct s_map
 	int	c;
 	int	e;
 }		t_map;
+
+
+
 
 #include "minilibx-linux/mlx.h"
 #include "libft/get_next_line.h"

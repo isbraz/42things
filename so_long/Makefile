@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/01 16:22:59 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/05 16:03:19 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,19 +25,20 @@ MLX_FLAGS = -L$(MLX_LIB_DIR) -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz -g3 -fs
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	make -C ./libft/
-	make -C $(MLX_LIB_DIR)
-	$(CC) $(CFLAGS) $(^) libft/libft.a $(MLX_FLAGS) -o $@
+	@make -C ./libft/
+	@make -C $(MLX_LIB_DIR)
+	@$(CC) $(CFLAGS) $(^) libft/libft.a $(MLX_FLAGS) -o $@
+	
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) $(MLX_INCLUDE) -c $(^) -o $(@)
+	@$(CC) $(CFLAGS) $(INCLUDES) $(MLX_INCLUDE) -c $(^) -o $(@)
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 	make clean -C ./libft/
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 	make fclean -C ./libft/
 
 re: fclean all
