@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:06:15 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/01 16:27:09 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/05 17:22:10 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_count_lines(int fd, char *map_name)
 	return (i);
 }
 
-void	ft_alocate_map(t_map *map, char *map_name)
+void	ft_alocate_map(t_game *map, char *map_name)
 {
 	int	fd;
 	int	i;
@@ -45,10 +45,7 @@ void	ft_alocate_map(t_map *map, char *map_name)
 	map->nlines = ft_count_lines(fd, map_name);
 	map->map = malloc(sizeof(char *) * (map->nlines + 1));
 	if (fd < 0)
-	{
-		ft_putstr_fd("error", 2);
-		return ;
-	}
+		exit(0);
 	while (i < map->nlines)
 	{
 		map->map[i] = get_next_line(fd);

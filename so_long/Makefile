@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
+#    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/05 16:03:19 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/05 17:34:27 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = so_long
 
 CFLAGS = -Wall -Werror -Wextra -g
 
-SRCS = check_map.c save_map.c main.c 
+SRCS = check_map.c save_map.c main.c
 
 OBJS = $(SRCS:.c=.o)
 

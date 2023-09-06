@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:10:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/05 16:32:39 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/05 17:23:53 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int	ft_first_and_last_line(t_map map)
+static int	ft_first_and_last_line(t_game map)
 {
 	int	i;
 	int	j;
@@ -28,7 +28,7 @@ static int	ft_first_and_last_line(t_map map)
 	return (0);
 }
 
-static int	ft_check_content(t_map map)
+static int	ft_check_content(t_game map)
 {
 	static int	i;
 	int	j;
@@ -53,7 +53,7 @@ static int	ft_check_content(t_map map)
 	return (0);
 }
 
-static int	ft_check_position(t_map map)
+static int	ft_check_position(t_game map)
 {
 	int	i;
 	int	j;
@@ -71,7 +71,7 @@ static int	ft_check_position(t_map map)
 	return (0);
 }
 
-static int	ft_is_line_equal(t_map map)
+static int	ft_is_line_equal(t_game map)
 {
 	int	i;
 	int	j;
@@ -85,7 +85,7 @@ static int	ft_is_line_equal(t_map map)
 	return (0);
 }
 
-int	ft_map_validations(t_map map)
+int	ft_game_validations(t_game map)
 {
 	if (ft_is_line_equal(map) && ft_first_and_last_line(map)
 	 	&& ft_check_position(map) && ft_check_content(map))
