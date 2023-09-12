@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/05 18:59:51 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/12 18:56:36 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct	s_data
 	int		endian;
 }		t_data;
 
-#include "minilibx-linux/mlx.h"
+#include "mlx/mlx.h"
 #include "libft/get_next_line.h"
 #include "libft/libft.h"
 

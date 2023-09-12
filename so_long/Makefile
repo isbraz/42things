@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
+#    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/07 20:46:23 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/12 18:55:55 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,31 +16,48 @@ CFLAGS = -Wall -Werror -Wextra -g
 
 SRCS = check_map.c save_map.c main.c
 
-OBJS = $(SRCS:.c=.o)
+LIBFT		=	libft/libft.a
 
-MLX_LIB_DIR = minilibx-linux
-MLX_INCLUDE = -Iminilibx-linux
-MLX_FLAGS = -L$(MLX_LIB_DIR) -lmlx_Linux -L/usr/lib -lXext -lX11 -lm -lz -g3 -fsanitize=address
+CFLAGS		=	-Wall -Wextra -Werror -g #-fsanitize=address
+MLX 		=	mlx/libmlx.a
 
-all: $(NAME)
+RM			=	rm -f
 
-$(NAME): $(OBJS)
-	@make -C ./libft/
-	@make -C $(MLX_LIB_DIR)
-	@$(CC) $(CFLAGS) $(^) libft/libft.a $(MLX_FLAGS) -o $@
+OBJS		=	$(SRCS:%.c=%.o)
+
+MLXFLAGS	=	-L ./mlx/ -lmlx -Ilmlx -lXext -lX11
 
 
-%.o: %.c
-	@$(CC) $(CFLAGS) $(INCLUDES) $(MLX_INCLUDE) -c $(^) -o $(@)
+# /* ~~~~~~~ Colors ~~~~~~~ */
+BLACK:="\033[1;30m"
+RED:="\033[1;31m"
+GREEN:="\033[1;32m"
+PURPLE:="\033[1;35m"
+CYAN:="\033[1;36m"
+WHITE:="\033[1;37m"
+EOC:="\033[0;0m"
+
+all:		$(NAME)
+
+$(NAME):	$(OBJS)
+	@echo $(CYAN) " - Compiling $@" $(RED)
+	@make -C libft
+	@make -C mlx
+	$(CC) $(SRCS) $(LIBFT) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
+
 
 clean:
-	@rm -f $(OBJS)
-	@make clean -C ./libft/
+	@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC)
+	$(RM) $(OBJS)
 
-fclean: clean
-	@rm -f $(NAME)
-	@make fclean -C ./libft/
+fclean:		clean
+	@echo $(PURPLE) "[🧹FCleaning...🧹]" $(EOC)
+	$(RM) $(NAME)
+	$(RM) *.out
+	make fclean -C libft/
 
-re: fclean all
+re:	fclean all
 
-.PHONY: all clean fclean re
+# To call: make git m="my commit"
+
+.PHONY:		all clean fclean re
