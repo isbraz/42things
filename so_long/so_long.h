@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/13 15:59:09 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 18:35:21 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,27 @@ typedef struct s_game
 	int	f;
 }		t_game;
 
-typedef struct	s_data 
+typedef struct	s_window
 {
-	void	*img;
-	char	*addr;
-	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
-}		t_data;
+	void	*mlx;
+	void	*mlx_win;
+	void	*bg;
+	void	*cimg;
+	void	*wimg;
+	void	*exitimg;
+	void	*pf;
+	void	*pd;
+	void	*pd2;
+	void	*pl;
+	void	*plw;
+	void	*plw2;
+	void	*pr;
+	void	*prw;
+	void	*prw2;
+	void	*pu;
+	void	*puw;
+	void	*puw2;
+}		t_window;
 
 #include "mlx/mlx.h"
 #include "libft/get_next_line.h"
