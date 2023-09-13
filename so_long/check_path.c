@@ -6,13 +6,13 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:09:03 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/12 19:00:47 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/12 19:56:55 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static char	**ft_copy_map(t_game *game)
+static void	ft_copy_map(t_game *game)
 {
 	char	**map_copy;
 	int		i;
@@ -27,7 +27,6 @@ static char	**ft_copy_map(t_game *game)
 		i++;
 	}
 	map_copy[i] = NULL;
-	return (map_copy);
 }
 
 void	ft_check_path(int x, int y, t_game game)
