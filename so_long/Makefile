@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/12 18:55:55 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/13 15:57:34 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = so_long
 
 CFLAGS = -Wall -Werror -Wextra -g
 
-SRCS = check_map.c save_map.c main.c
+SRCS = check_map.c save_map.c main.c check_path.c
 
 LIBFT		=	libft/libft.a
 

@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:10:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/13 13:57:22 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:28:54 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ static int	ft_check_content(t_game *map)
 		if (map->map[i][j] == '\n' && ++i)
 			j = 1;
 	}
-	printf("numero de coletaveis dentro da fun : %d\n", map->c);
 	if (map->p == 1 && map->e == 1 && map->c >= 1)
 		return (1);
 	return (0);
@@ -86,12 +85,12 @@ static int	ft_is_line_equal(t_game map)
 	return (0);
 }
 
-int	ft_game_validations(t_game map)
+int	ft_game_validations(t_game *map)
 {
-	if (ft_is_line_equal(map) && ft_first_and_last_line(map)
-	 	&& ft_check_position(map) && ft_check_content(&map))
+	if (ft_is_line_equal(*map) && ft_first_and_last_line(*map)
+	 	&& ft_check_position(*map) && ft_check_content(map))
 			return (1);
-	printf("error\n");
+	ft_putendl_fd("Error",2);
 	exit(EXIT_FAILURE);
 	return (0);
 }

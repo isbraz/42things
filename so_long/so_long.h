@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/12 18:56:36 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:59:09 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 typedef struct s_game
 {
 	char	**map;
-	int	col;
-	int	line;
+	int	x;
+	int	y;
 	int	nlines;
 	int	p;
 	int	c;
 	int	e;
+	int	f;
 }		t_game;
 
 typedef struct	s_data 
@@ -39,6 +40,8 @@ typedef struct	s_data
 #include "libft/libft.h"
 
 void	ft_alocate_map(t_game *map, char *map_name);
-int	ft_game_validations(t_game map);
+int	ft_game_validations(t_game *map);
+void	ft_copy_map(t_game *game);
+void	ft_check_path(t_game *game ,int x, int y, char **map_copy);
 
 # endif

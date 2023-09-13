@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 20:49:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/13 13:58:03 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:02:01 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ int	main(int ac, char **argv)
 	}
 	ft_memset(&map, 0, sizeof(t_game));
 	ft_alocate_map(&map, argv[1]);
-	ft_game_validations(map);
-	printf("numero de coletaveis :%d\n", map.c);
+	ft_game_validations(&map);
+	ft_copy_map(&map);
+	//printf("numero de coletaveis :%d\n", map.c);
 	//mlx = mlx_init();
 	//mlx_win = mlx_new_window(mlx, 200, 100, "Hello world!");
 	//mlx_loop(mlx);
