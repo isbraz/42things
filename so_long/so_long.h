@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/14 16:29:13 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:57:40 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,13 @@ typedef struct	s_window
 	void	*puw;
 	void	*puw2;
 }		t_window;
+
+typedef struct s_player
+{
+	int	x;
+	int	y;
+}		t_player;
+
 
 #include "mlx/mlx.h"
 #include "libft/get_next_line.h"
