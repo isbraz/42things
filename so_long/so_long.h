@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/13 18:35:21 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:29:13 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct	s_window
 	void	*bg;
 	void	*cimg;
 	void	*wimg;
-	void	*exitimg;
+	void	*eimg;
 	void	*pf;
 	void	*pd;
 	void	*pd2;

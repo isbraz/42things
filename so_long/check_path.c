@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_path.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:09:03 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/13 16:25:11 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/14 11:28:06 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_copy_map(t_game *game)
 	free(map_copy);
 	if (game->c != 0 || game->f != 1)
 	{
-		ft_putendl_fd("Error flood fill", 2);
+		ft_putendl_fd("Error", 2);
 		exit(EXIT_FAILURE);
 	}
 }
