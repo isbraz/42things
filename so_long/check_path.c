@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:09:03 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/14 11:28:06 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/15 11:41:28 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	ft_player_position(t_game *game)
 		if (game->map[i][j] == '\n')
 		{
 			i++;
-			j = 0;
+			j = 1;
 		}
 		j++;
 	}

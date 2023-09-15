@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
+#    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/13 15:57:34 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/15 14:27:23 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = so_long
 
 CFLAGS = -Wall -Werror -Wextra -g
 
-SRCS = check_map.c save_map.c main.c check_path.c
+SRCS = check_map.c save_map.c main.c check_path.c images.c
 
 LIBFT		=	libft/libft.a
 

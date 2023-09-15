@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/14 16:57:40 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/15 15:26:23 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,10 @@ typedef struct	s_window
 	void	*wimg;
 	void	*eimg;
 	void	*pf;
-	void	*pd;
-	void	*pd2;
 	void	*pl;
-	void	*plw;
-	void	*plw2;
 	void	*pr;
-	void	*prw;
-	void	*prw2;
 	void	*pu;
-	void	*puw;
-	void	*puw2;
+	void	*pcurrent;
 }		t_window;
 
 typedef struct s_player
@@ -63,5 +56,8 @@ void	ft_alocate_map(t_game *map, char *map_name);
 int	ft_game_validations(t_game *map);
 void	ft_copy_map(t_game *game);
 void	ft_check_path(t_game *game ,int x, int y, char **map_copy);
+void	ft_init_images(t_window *window);
+void	put_image(t_window *window, int x, int y, int option);
+void	print_map(t_game *game, t_window *window);
 
 # endif
