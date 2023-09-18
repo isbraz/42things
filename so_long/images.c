@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:21:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/15 15:34:19 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/15 15:46:11 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,33 +62,21 @@ void	print_map(t_game *game, t_window *window)
 	int	j;
 
 	i = 0;
-	(void)window;
 	while (game->map[i])
 	{
 		j = 0;
 		while (game->map[i][j])
 		{
 			if (game->map[i][j] == '1')
-			{
 				put_image(window, i, j, 0);
-			}
 			if (game->map[i][j] == '0')
-			{
 				put_image(window, i, j, 1);
-			}
 			if (game->map[i][j] == 'C')
-			{
 				put_image(window, i, j, 2);
-			}
 			if (game->map[i][j] == 'E')
-			{
 				put_image(window, i, j, 4);
-			}
-			
 			if (game->map[i][j] == 'P')
-			{
 				put_image(window, i, j, 3);
-			}
 			j++;
 		}
 		ft_putstr_fd(game->map[i], 2);
