@@ -3,28 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/15 15:26:23 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/18 17:42:32 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-
-typedef struct s_game
-{
-	char	**map;
-	int	x;
-	int	y;
-	int	nlines;
-	int	p;
-	int	c;
-	int	e;
-	int	f;
-}		t_game;
 
 typedef struct	s_window
 {
@@ -41,11 +29,25 @@ typedef struct	s_window
 	void	*pcurrent;
 }		t_window;
 
-typedef struct s_player
+typedef struct s_game
 {
+	char	**map;
 	int	x;
 	int	y;
-}		t_player;
+	int	nlines;
+	int	p;
+	int	c;
+	int	e;
+	int	f;
+	t_window win; 
+}		t_game;
+
+
+// typedef struct s_player
+// {
+// 	int	x;
+// 	int	y;
+// }		t_player;
 
 
 #include "mlx/mlx.h"
