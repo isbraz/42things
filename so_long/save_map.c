@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:06:15 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/18 16:14:38 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:27:14 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ void	ft_alocate_map(t_game *map, char *map_name)
 	i = 0;
 	fd = open (map_name, O_RDONLY);
 	map->nlines = ft_count_lines(fd, map_name);
+	if (map->nlines == 1)
+	{
+		ft_putendl_fd("Error", 2);
+		exit(EXIT_FAILURE);
+	}
 	map->map = malloc(sizeof(char *) * (map->nlines + 1));
 	if (fd < 0)
 		exit(0);
