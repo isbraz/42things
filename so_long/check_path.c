@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:09:03 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/15 11:41:28 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/21 14:21:31 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	ft_copy_map(t_game *game)
 	int		i;
 
 	i = 0;
+	game->cp = game->c;
 	map_copy = malloc(sizeof(char *) * (game->nlines + 1));
 	if (!map_copy)
 		return ;
@@ -54,11 +55,8 @@ void	ft_copy_map(t_game *game)
 	ft_player_position(game);
 	ft_check_path(game, game->x, game->y, map_copy);
 	free(map_copy);
-	if (game->c != 0 || game->f != 1)
-	{
-		ft_putendl_fd("Error", 2);
-		exit(EXIT_FAILURE);
-	}
+	if (game->cp != 0 || game->f != 1)
+		exit_game(game, 0);
 }
 
 void	ft_check_path(t_game *game ,int x, int y, char **map_copy)
@@ -66,7 +64,7 @@ void	ft_check_path(t_game *game ,int x, int y, char **map_copy)
 	if (map_copy[y][x] == 'G' || map_copy[y][x] == '1')
 		return ;
 	else if (map_copy[y][x] == 'C')
-		game->c--;
+		game->cp--;
 	else if (map_copy[y][x] == 'E')
 	{
 		game->f = 1;

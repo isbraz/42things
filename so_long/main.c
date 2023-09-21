@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 20:49:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/19 13:44:29 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:15:45 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,10 @@ int	main(int ac, char **argv)
 	ft_copy_map(&game);
 	// printf("numero de coletaveis :%d\n", game.c);
 	game.win.mlx = mlx_init();
-	game.win.mlx_win = mlx_new_window(game.win.mlx, ((int)ft_strlen(game.map[0]) - 2) * 32, (game.nlines - 1) * 32, "Hello world!");
+	game.win.mlx_win = mlx_new_window(game.win.mlx, ((int)ft_strlen(game.map[0]) - 2) * 32, (game.nlines - 1) * 32, "Naruto");
 	ft_init_images(&game.win);
 	print_map(&game, &game.win);
+	mlx_hook(game.win.mlx_win, 17, 1L << 0, ft_key, &game);
+	mlx_hook(game.win.mlx_win, 2, 1L << 0, ft_key, &game);
 	mlx_loop(game.win.mlx);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:10:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/13 16:28:54 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/21 13:30:28 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ int	ft_game_validations(t_game *map)
 	if (ft_is_line_equal(*map) && ft_first_and_last_line(*map)
 	 	&& ft_check_position(*map) && ft_check_content(map))
 			return (1);
-	ft_putendl_fd("Error",2);
-	exit(EXIT_FAILURE);
+	exit_game(map, 0);
 	return (0);
 }
