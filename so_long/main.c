@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 20:49:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/20 17:15:45 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:35:03 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	main(int ac, char **argv)
 	ft_alocate_map(&game, argv[1]);
 	ft_game_validations(&game);
 	ft_copy_map(&game);
-	// printf("numero de coletaveis :%d\n", game.c);
 	game.win.mlx = mlx_init();
 	game.win.mlx_win = mlx_new_window(game.win.mlx, ((int)ft_strlen(game.map[0]) - 2) * 32, (game.nlines - 1) * 32, "Naruto");
 	ft_init_images(&game.win);

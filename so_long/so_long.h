@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/21 14:30:24 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:24:59 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ void	put_image(t_window *window, int x, int y, int option);
 void	print_map(t_game *game, t_window *window);
 int     ft_key(int keycode, t_game *game);
 void	exit_game(t_game *game, int f);
+void	free_map(char **map);
 
 # endif

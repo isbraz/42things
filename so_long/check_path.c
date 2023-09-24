@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 13:09:03 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/21 14:21:31 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:34:27 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_copy_map(t_game *game)
 	map_copy = malloc(sizeof(char *) * (game->nlines + 1));
 	if (!map_copy)
 		return ;
-	while(game->map[i])
+	while (game->map[i])
 	{
 		map_copy[i] = ft_strdup(game->map[i]);
 		i++;
@@ -54,12 +54,12 @@ void	ft_copy_map(t_game *game)
 	map_copy[i] = NULL;
 	ft_player_position(game);
 	ft_check_path(game, game->x, game->y, map_copy);
-	free(map_copy);
+	free_map(map_copy);
 	if (game->cp != 0 || game->f != 1)
 		exit_game(game, 0);
 }
 
-void	ft_check_path(t_game *game ,int x, int y, char **map_copy)
+void	ft_check_path(t_game *game, int x, int y, char **map_copy)
 {
 	if (map_copy[y][x] == 'G' || map_copy[y][x] == '1')
 		return ;

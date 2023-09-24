@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 15:47:56 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/21 14:33:16 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:06:03 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,16 @@ static void	ft_move_player(t_game *game, int y, int x)
 		game->y += y;
 		game->x += x;
 		game->map[game->y][game->x] = 'P';
-		//print_map(game, &game->win);
 	}
 	if (game->map[game->y + y][game->x + x] == 'E' && game->c == 0)
-	{
-		ft_putendl_fd("You won!!!!", 2);
-		exit(EXIT_SUCCESS);
-	}
+		exit_game(game, 2);
 	print_map(game, &game->win);
 }
 
 int	ft_key(int keycode, t_game *game)
 {
 	if (keycode == K_ESC)
-	{
-		ft_putendl_fd("WOW you're giving up!!!!!", 2);
-		exit(EXIT_FAILURE);
-	}
+		exit_game(game, 1);
 	if (keycode == KEY_W)
 	{
 		game->win.pcurrent = game->win.pu;

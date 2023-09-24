@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/21 11:51:29 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/24 12:23:48 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS = check_map.c save_map.c main.c check_path.c images.c keyboard.c clean.c
 
 LIBFT		=	libft/libft.a
 
-CFLAGS		=	-Wall -Wextra -Werror -g #-fsanitize=address
+CFLAGS		=	-Wall -Wextra -Werror -g -fsanitize=address
 MLX 		=	mlx/libmlx.a
 
 RM			=	rm -f
