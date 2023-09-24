@@ -14,6 +14,8 @@
 
 static void	ft_move_player(t_game *game, int y, int x) 
 {
+	static int	moves;
+
 	if (game->map[game->y + y][game->x + x] != '1' && game->map[game->y + y][game->x + x] != 'E')
 	{
 		if (game->map[game->y + y][game->x + x] == 'C')
@@ -22,6 +24,9 @@ static void	ft_move_player(t_game *game, int y, int x)
 		game->y += y;
 		game->x += x;
 		game->map[game->y][game->x] = 'P';
+		moves++;
+		ft_putnbr_fd(moves, 2);
+		write(1, "\n", 1);
 	}
 	if (game->map[game->y + y][game->x + x] == 'E' && game->c == 0)
 		exit_game(game, 2);

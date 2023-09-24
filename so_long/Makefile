@@ -18,7 +18,7 @@ SRCS = check_map.c save_map.c main.c check_path.c images.c keyboard.c clean.c
 
 LIBFT		=	libft/libft.a
 
-CFLAGS		=	-Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS		=	-Wall -Wextra -Werror -g #-fsanitize=address
 MLX 		=	mlx/libmlx.a
 
 RM			=	rm -f

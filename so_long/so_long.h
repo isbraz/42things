@@ -53,7 +53,6 @@ typedef struct s_game
 	int	cp;
 	int	e;
 	int	f;
-	int	m;
 	t_window win; 
 }		t_game;
 
