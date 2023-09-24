@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/22 13:24:59 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/24 13:32:08 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ typedef struct s_game
 	int	cp;
 	int	e;
 	int	f;
+	int	m;
 	t_window win; 
 }		t_game;
 
