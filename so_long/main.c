@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 20:49:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/22 13:35:03 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 12:01:17 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,11 @@ int	main(int ac, char **argv)
 	ft_game_validations(&game);
 	ft_copy_map(&game);
 	game.win.mlx = mlx_init();
-	game.win.mlx_win = mlx_new_window(game.win.mlx, ((int)ft_strlen(game.map[0]) - 2) * 32, (game.nlines - 1) * 32, "Naruto");
+	game.win.mlx_win = mlx_new_window(game.win.mlx, \
+	(ft_strlen(game.map[0]) - 2) * 32, (game.nlines - 1) * 32, "Naruto");
 	ft_init_images(&game.win);
 	print_map(&game, &game.win);
-	mlx_hook(game.win.mlx_win, 17, 1L << 0, ft_key, &game);
+	mlx_hook(game.win.mlx_win, 17, 1L << 0, exit_gametwo, &game);
 	mlx_hook(game.win.mlx_win, 2, 1L << 0, ft_key, &game);
 	mlx_loop(game.win.mlx);
 }

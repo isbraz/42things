@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:21:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/20 17:00:51 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 12:00:02 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_init_images(t_window *window)
 {
 	int	i;
-	
+
 	window->bg = mlx_xpm_file_to_image(window->mlx, "./i/bg.xpm", &i, &i);
 	window->cimg = mlx_xpm_file_to_image(window->mlx, "./i/c.xpm", &i, &i);
 	window->eimg = mlx_xpm_file_to_image(window->mlx, "./i/e.xpm", &i, &i);

@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 20:08:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/24 13:11:57 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 11:59:42 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	destroy_images(t_game *game)
 void	free_map(char **map)
 {
 	int	i;
-	
+
 	i = 0;
 	while (map[i])
 	{
@@ -41,6 +41,17 @@ void	free_map(char **map)
 		i++;
 	}
 	free(map);
+}
+
+int	exit_gametwo(t_game *game)
+{
+	ft_putendl_fd("Lol you're giving up!!!!", 2);
+	free_map(game->map);
+	destroy_images(game);
+	destroy_window(game);
+	free(game->win.mlx);
+	exit(EXIT_FAILURE);
+	return (0);
 }
 
 void	exit_game(t_game *game, int f)

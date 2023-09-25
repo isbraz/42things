@@ -6,17 +6,18 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 15:47:56 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/22 13:06:03 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 11:58:21 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void	ft_move_player(t_game *game, int y, int x) 
+static void	ft_move_player(t_game *game, int y, int x)
 {
 	static int	moves;
 
-	if (game->map[game->y + y][game->x + x] != '1' && game->map[game->y + y][game->x + x] != 'E')
+	if (game->map[game->y + y][game->x + x] != '1' \
+	&& game->map[game->y + y][game->x + x] != 'E')
 	{
 		if (game->map[game->y + y][game->x + x] == 'C')
 			game->c--;
@@ -35,6 +36,8 @@ static void	ft_move_player(t_game *game, int y, int x)
 
 int	ft_key(int keycode, t_game *game)
 {
+	if (keycode == ON_DESTROY)
+		exit_game(game, 1);
 	if (keycode == K_ESC)
 		exit_game(game, 1);
 	if (keycode == KEY_W)

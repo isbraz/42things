@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/24 13:32:08 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 11:48:57 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ enum
 	A_DOWN = 65364,
 	A_LEFT = 65361,
 	A_RIGHT = 65363,
-	K_ESC = 65307
+	K_ESC = 65307,
+	ON_DESTROY = 17
 };
 
 typedef struct	s_window
@@ -70,5 +71,6 @@ void	print_map(t_game *game, t_window *window);
 int     ft_key(int keycode, t_game *game);
 void	exit_game(t_game *game, int f);
 void	free_map(char **map);
+int	exit_gametwo(t_game *game);
 
 # endif
