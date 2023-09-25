@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:21:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/25 15:21:47 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:39:54 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,15 +58,16 @@ void	put_image(t_window *window, int y, int x, int option)
 
 void	print_map(t_game *game, t_window *window)
 {
-	static int	i;
+	int			i;
 	int			j;
 	char		*moves;
 
+	i = -1;
 	moves = ft_itoa(game->m);
-	while (game->map[i])
+	while (game->map[++i])
 	{
-		j = 0;
-		while (game->map[i][j])
+		j = -1;
+		while (game->map[i][++j])
 		{
 			if (game->map[i][j] == '1')
 				put_image(window, i, j, 0);
@@ -78,9 +79,7 @@ void	print_map(t_game *game, t_window *window)
 				put_image(window, i, j, 4);
 			if (game->map[i][j] == 'P')
 				put_image(window, i, j, 3);
-			j++;
 		}
-		i++;
 	}
 	mlx_string_put(window->mlx, window->mlx_win, 10, 20, 0xffffffff, moves);
 }
