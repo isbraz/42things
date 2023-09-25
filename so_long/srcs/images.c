@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   images.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:21:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/25 12:00:02 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:21:47 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	ft_init_images(t_window *window)
 {
 	int	i;
 
-	window->bg = mlx_xpm_file_to_image(window->mlx, "./i/bg.xpm", &i, &i);
-	window->cimg = mlx_xpm_file_to_image(window->mlx, "./i/c.xpm", &i, &i);
-	window->eimg = mlx_xpm_file_to_image(window->mlx, "./i/e.xpm", &i, &i);
-	window->pf = mlx_xpm_file_to_image(window->mlx, "./i/n1.xpm", &i, &i);
-	window->pl = mlx_xpm_file_to_image(window->mlx, "./i/n4.xpm", &i, &i);
-	window->pr = mlx_xpm_file_to_image(window->mlx, "./i/n7.xpm", &i, &i);
-	window->pu = mlx_xpm_file_to_image(window->mlx, "./i/n10.xpm", &i, &i);
-	window->wimg = mlx_xpm_file_to_image(window->mlx, "./i/w.xpm", &i, &i);
+	window->bg = mlx_xpm_file_to_image(window->mlx, "../i/bg.xpm", &i, &i);
+	window->cimg = mlx_xpm_file_to_image(window->mlx, "../i/c.xpm", &i, &i);
+	window->eimg = mlx_xpm_file_to_image(window->mlx, "../i/e.xpm", &i, &i);
+	window->pf = mlx_xpm_file_to_image(window->mlx, "../i/n1.xpm", &i, &i);
+	window->pl = mlx_xpm_file_to_image(window->mlx, "../i/n4.xpm", &i, &i);
+	window->pr = mlx_xpm_file_to_image(window->mlx, "../i/n7.xpm", &i, &i);
+	window->pu = mlx_xpm_file_to_image(window->mlx, "../i/n10.xpm", &i, &i);
+	window->wimg = mlx_xpm_file_to_image(window->mlx, "../i/w.xpm", &i, &i);
 	window->pcurrent = window->pf;
 }
 
@@ -58,10 +58,11 @@ void	put_image(t_window *window, int y, int x, int option)
 
 void	print_map(t_game *game, t_window *window)
 {
-	int	i;
-	int	j;
+	static int	i;
+	int			j;
+	char		*moves;
 
-	i = 0;
+	moves = ft_itoa(game->m);
 	while (game->map[i])
 	{
 		j = 0;
@@ -81,4 +82,5 @@ void	print_map(t_game *game, t_window *window)
 		}
 		i++;
 	}
+	mlx_string_put(window->mlx, window->mlx_win, 10, 20, 0xffffffff, moves);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keyboard.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 15:47:56 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/25 11:58:21 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:19:27 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 static void	ft_move_player(t_game *game, int y, int x)
 {
-	static int	moves;
-
 	if (game->map[game->y + y][game->x + x] != '1' \
 	&& game->map[game->y + y][game->x + x] != 'E')
 	{
@@ -25,9 +23,7 @@ static void	ft_move_player(t_game *game, int y, int x)
 		game->y += y;
 		game->x += x;
 		game->map[game->y][game->x] = 'P';
-		moves++;
-		ft_putnbr_fd(moves, 2);
-		write(1, "\n", 1);
+		game->m++;
 	}
 	if (game->map[game->y + y][game->x + x] == 'E' && game->c == 0)
 		exit_game(game, 2);
@@ -36,8 +32,6 @@ static void	ft_move_player(t_game *game, int y, int x)
 
 int	ft_key(int keycode, t_game *game)
 {
-	if (keycode == ON_DESTROY)
-		exit_game(game, 1);
 	if (keycode == K_ESC)
 		exit_game(game, 1);
 	if (keycode == KEY_W)

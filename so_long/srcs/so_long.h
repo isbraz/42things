@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 15:27:25 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/25 11:48:57 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:13:24 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef SO_LONG_H
 # define SO_LONG_H
+
+# include "../mlx/mlx.h"
+# include "../libft/get_next_line.h"
+# include "../libft/libft.h"
 
 enum
 {
@@ -28,7 +31,7 @@ enum
 	ON_DESTROY = 17
 };
 
-typedef struct	s_window
+typedef struct s_window
 {
 	void	*mlx;
 	void	*mlx_win;
@@ -46,31 +49,28 @@ typedef struct	s_window
 typedef struct s_game
 {
 	char	**map;
-	int	x;
-	int	y;
-	int	nlines;
-	int	p;
-	int	c;
-	int	cp;
-	int	e;
-	int	f;
-	t_window win; 
+	int		x;
+	int		y;
+	int		p;
+	int		c;
+	int		cp;
+	int		e;
+	int		m;
+	int		f;
+	int		nlines;
+	t_window	win; 
 }		t_game;
 
-#include "mlx/mlx.h"
-#include "libft/get_next_line.h"
-#include "libft/libft.h"
-
 void	ft_alocate_map(t_game *map, char *map_name);
-int	ft_game_validations(t_game *map);
+int		ft_game_validations(t_game *map);
 void	ft_copy_map(t_game *game);
-void	ft_check_path(t_game *game ,int x, int y, char **map_copy);
+void	ft_check_path(t_game *game, int x, int y, char **map_copy);
 void	ft_init_images(t_window *window);
 void	put_image(t_window *window, int x, int y, int option);
 void	print_map(t_game *game, t_window *window);
-int     ft_key(int keycode, t_game *game);
+int		ft_key(int keycode, t_game *game);
 void	exit_game(t_game *game, int f);
 void	free_map(char **map);
-int	exit_gametwo(t_game *game);
+int		exit_gametwo(t_game *game);
 
 # endif

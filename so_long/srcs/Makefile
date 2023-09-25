@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
+#    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/24 12:23:48 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/25 12:23:27 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Werror -Wextra -g
 
 SRCS = check_map.c save_map.c main.c check_path.c images.c keyboard.c clean.c
 
-LIBFT		=	libft/libft.a
+LIBFT		=	../libft/libft.a
 
 CFLAGS		=	-Wall -Wextra -Werror -g #-fsanitize=address
 MLX 		=	mlx/libmlx.a
@@ -25,7 +25,7 @@ RM			=	rm -f
 
 OBJS		=	$(SRCS:%.c=%.o)
 
-MLXFLAGS	=	-L ./mlx/ -lmlx -Ilmlx -lXext -lX11
+MLXFLAGS	=	-L ../mlx/ -lmlx -Ilmlx -lXext -lX11
 
 
 # /* ~~~~~~~ Colors ~~~~~~~ */
@@ -41,8 +41,8 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 	@echo $(CYAN) " - Compiling $@" $(RED)
-	@make -C libft
-	@make -C mlx
+	@make -C ../libft
+	@make -C ../mlx
 	$(CC) $(SRCS) $(LIBFT) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
 
 
@@ -54,7 +54,7 @@ fclean:		clean
 	@echo $(PURPLE) "[🧹FCleaning...🧹]" $(EOC)
 	$(RM) $(NAME)
 	$(RM) *.out
-	make fclean -C libft/
+	make fclean -C ../libft/
 
 re:	fclean all
 
