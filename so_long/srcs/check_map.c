@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:10:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/22 13:32:33 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:04:16 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static int	ft_check_content(t_game *map)
 		if (map->map[i][j] == 'E')
 			map->e++;
 		if (map->map[i][j] == '\n' && ++i)
-			j = 1;
+			j = 0;
 	}
 	if (map->p == 1 && map->e == 1 && map->c >= 1)
 		return (1);
