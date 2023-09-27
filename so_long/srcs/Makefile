@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/18 15:27:40 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/25 12:23:27 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/26 11:31:51 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,11 +53,8 @@ clean:
 fclean:		clean
 	@echo $(PURPLE) "[🧹FCleaning...🧹]" $(EOC)
 	$(RM) $(NAME)
-	$(RM) *.out
 	make fclean -C ../libft/
 
 re:	fclean all
-
-# To call: make git m="my commit"
 
 .PHONY:		all clean fclean re

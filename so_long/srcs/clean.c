@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   clean.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 20:08:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/25 11:59:42 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/26 11:25:56 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	exit_game(t_game *game, int f)
 {
 	if (f == 0)
 	{
-		ft_putendl_fd("Error Invalid map", 2);
+		ft_putendl_fd("Error", 2);
 		free_map(game->map);
 		exit(EXIT_FAILURE);
 	}

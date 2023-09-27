@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.com.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:21:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/25 15:39:54 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/26 11:14:16 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,5 @@ void	print_map(t_game *game, t_window *window)
 		}
 	}
 	mlx_string_put(window->mlx, window->mlx_win, 10, 20, 0xffffffff, moves);
+	free(moves);
 }
