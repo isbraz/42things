@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 14:46:17 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/26 14:54:05 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/27 17:18:00 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	push_swap
 
 CFLAGS	=	-Wall -Werror -Wextra 
 
-SRCS	= 
+SRCS	= 	main.c moves.c
 
 OBJS	=	$(SRCS:%.c=%.o)
 

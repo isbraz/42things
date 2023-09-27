@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/21 13:59:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/27 16:40:41 by isbraz-d         ###   ########.fr       */
+/*   Created: 2023/09/27 16:46:41 by isbraz-d          #+#    #+#             */
+/*   Updated: 2023/09/27 17:06:18 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-t_list	*ft_lstnew(int content)
+void	ft_swap(t_list **stack)
 {
-	t_list	*newnode;
+	t_list	*tmp;
 
-	newnode = (t_list *)malloc(sizeof(*newnode));
-	if (!newnode)
-		return (NULL);
-	newnode->content = content;
-	newnode->next = NULL;
-	return (newnode);
+	tmp = *stack;
+	*stack = (*stack)->next;
+	tmp->next = (*stack)->next;
+	(*stack)->next = tmp;
 }
+void	ft_push(t_list **stack_a, t_list **stack_b)
+{
+	t_list	*tmp;
+
+	tmp = *stack_a;
+	*stack_a = (*stack_a)->next;
+	tmp->next = *stack_b;
+	*stack_b = tmp;
+}
+
