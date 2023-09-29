@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 14:46:17 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/27 17:18:00 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/09/29 01:08:11 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,11 @@ NAME	=	push_swap
 
 CFLAGS	=	-Wall -Werror -Wextra 
 
-SRCS	= 	main.c moves.c
+SRCS	= 	main.c moves.c utils.c
 
 OBJS	=	$(SRCS:%.c=%.o)
 
-LIBFT		=	../libft/libft.a
+LIBFT		=	libft/libft.a
 
 RM			=	rm -f
 
@@ -35,17 +35,18 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 	@echo $(CYAN) " - Compiling $@" $(RED)
-	@make -C ../libft
-	$(CC) $(SRCS) $(LIBFT) $(CFLAGS) -o $(NAME)
+	@make -C libft
+	$(CC) $(SRCS) $(CFLAGS) -o $(NAME) -Llibft -lft
 
 clean:
 	@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC)
+	@make clean -C libft
 	$(RM) $(OBJS)
 
 fclean:		clean
 	@echo $(PURPLE) "[🧹FCleaning...🧹]" $(EOC)
 	$(RM) $(NAME)
-	make fclean -C ../libft/
+	make fclean -C libft
 
 re:	fclean all
 

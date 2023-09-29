@@ -6,14 +6,14 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 11:14:36 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/27 16:39:27 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/09/29 00:52:10 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
-{
-	//(*del)(lst->content);
-	free(lst);
-}
+// void	ft_lstdelone(t_list *lst, void (*del)(void*))
+// {
+// 	(*del)(lst->content);
+// 	free(lst);
+// }
