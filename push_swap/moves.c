@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:46:41 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/28 17:24:17 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:52:08 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_swap(t_list **stack)
 	tmp->next = (*stack)->next;
 	(*stack)->next = tmp;
 }
+
 void	ft_push(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;
@@ -29,4 +30,9 @@ void	ft_push(t_list **stack_a, t_list **stack_b)
 	*stack_a = (*stack_a)->next;
 	tmp->next = *stack_b;
 	*stack_b = tmp;
+}
+
+void	ft_rotate(t_list **stack)
+{
+	
 }

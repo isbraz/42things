@@ -6,7 +6,7 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 14:46:17 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/09/29 01:08:11 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/10/02 15:56:00 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,6 @@ CFLAGS	=	-Wall -Werror -Wextra
 SRCS	= 	main.c moves.c utils.c
 
 OBJS	=	$(SRCS:%.c=%.o)
-
-LIBFT		=	libft/libft.a
 
 RM			=	rm -f
 
@@ -35,18 +33,15 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 	@echo $(CYAN) " - Compiling $@" $(RED)
-	@make -C libft
-	$(CC) $(SRCS) $(CFLAGS) -o $(NAME) -Llibft -lft
+	$(CC) $(SRCS) $(CFLAGS) -o $(NAME)
 
 clean:
-	@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC)
-	@make clean -C libft
+	@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC) 
 	$(RM) $(OBJS)
 
 fclean:		clean
 	@echo $(PURPLE) "[🧹FCleaning...🧹]" $(EOC)
 	$(RM) $(NAME)
-	make fclean -C libft
 
 re:	fclean all
 

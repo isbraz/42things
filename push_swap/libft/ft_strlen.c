@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 18:06:32 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/04 17:33:47 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/02 16:49:43 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,11 @@
 int	ft_strlen(const char *s)
 {
 	int	i;
-	int	f;
 
 	i = 0;
-	f = 0;
 	if (s == NULL)
 		return (0);
 	while (s[i] != '\0')
-	{
-		if (s[i] == '\n')
-			f = -1;
 		i++;
-	}
-	return (i - f);
+	return (i);
 }

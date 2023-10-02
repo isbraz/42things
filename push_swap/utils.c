@@ -6,11 +6,20 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 01:02:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/09/29 01:06:20 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/02 16:15:11 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+t_list	*lstlast(t_list *lst)
+{
+	if (!lst)
+		return (0);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
+}
 
 t_list	*lstnew(int content)
 {
@@ -32,7 +41,7 @@ void	lstadd_back(t_list **lst, t_list *new)
 	{
 		if (*lst)
 		{
-			last = ft_lstlast(*lst);
+			last = lstlast(*lst);
 			last->next = new;
 		}
 		else
