@@ -6,15 +6,15 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 14:46:17 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/10/02 15:56:00 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/10/04 14:46:51 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	push_swap
 
-CFLAGS	=	-Wall -Werror -Wextra 
+CFLAGS	=	-Wall -Wextra -Werror 
 
-SRCS	= 	main.c moves.c utils.c
+SRCS	= 	main.c moves.c utils.c utils2.c
 
 OBJS	=	$(SRCS:%.c=%.o)
 
@@ -36,11 +36,11 @@ $(NAME):	$(OBJS)
 	$(CC) $(SRCS) $(CFLAGS) -o $(NAME)
 
 clean:
-	@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC) 
+	@echo $(PURPLE) "[Cleaning...]" $(EOC) 
 	$(RM) $(OBJS)
 
 fclean:		clean
-	@echo $(PURPLE) "[🧹FCleaning...🧹]" $(EOC)
+	@echo $(PURPLE) "[FCleaning...]" $(EOC)
 	$(RM) $(NAME)
 
 re:	fclean all
