@@ -6,43 +6,51 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:44:14 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/12 14:14:04 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/12 18:01:11 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_argv(char **argv)
-{
-	int	i;
-	int	j;
+// int	check_argv(char **argv)
+// {
+// 	int	i;
+// 	int	j;
 
-	j = 1;
-	i = 0;
+// 	j = 1;
+// 	i = 0;
 	
-}
+// }
 
 void	ft_create_stack(t_list **stack, char **argv)
 {
 	int	i;
 
-	i = 1;
-	
+	i = 2;
+	*stack = lstnew(ft_atoi(argv[1]));
+	while (argv[i])
+	{
+		lstadd_back(stack, lstnew(ft_atoi(argv[i])));
+		i++;
+	}	
 }
 int	main(int ac, char **argv)
 {
 	t_list	*stack_a;
-	t_list	*stack_b;
+	// t_list	*stack_b;
 	t_list	*tmp;
 
-	if (ac < 1)
+	stack_a = NULL;
+	if (ac < 2)
 		return (0);
+	ft_create_stack(&stack_a, argv);
+	tmp = stack_a;
+	while (tmp)
+	{
+		printf("%d\n", tmp->content);
+		tmp = tmp->next;
+	}
 }
-
-
-
-
-
 
 // int	main()
 // {

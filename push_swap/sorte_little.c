@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:51:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/12 13:53:29 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:21:04 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ void	sort_four_five(t_list **stack_s, t_list **stack_r)
 	}
 	else if (size == 5)
 	{
-		moves_five(stack_s, *stack_r, pos_small);
+		moves_five(stack_s, stack_r, pos_small);
 		size = ft_lstsize(*stack_s);
 		free(list);
 		list = list_to_array(*stack_s);
