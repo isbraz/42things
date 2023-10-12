@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 16:44:48 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/02 17:50:17 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/11 13:12:13 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,34 @@ int	ft_atoi(char *s)
 	return (sign * res);
 }
 
+int	*list_to_array(t_list *stack)
+{
+	int	*list;
+	int	i;
+	
+	i = 0;
+	list = malloc(sizeof(int) * ft_lstsize(stack));
+	while (stack)
+	{
+		list[i] = stack->content;
+		stack = stack->next;
+		i++;
+	}
+	return (list);
+}
+
+int	smallest_number(int *list)
+{
+	int	i;
+	int	smallest;
+
+	i = 0;
+	smallest = list[i];
+	while (list[i])
+	{
+		if (list[i] < smallest)
+			smallest = i;
+		i++;
+	}
+	return (smallest);
+}

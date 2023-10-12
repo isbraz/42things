@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:46:41 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/04 16:51:24 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:13:54 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	ft_push(t_list **stack_s, t_list **stack_r)
 {
 	t_list	*tmp;
 
+	if (!*stack_s)
+		return ;
 	tmp = *stack_s;
 	*stack_s = (*stack_s)->next;
 	tmp->next = *stack_r;

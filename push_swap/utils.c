@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 01:02:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/02 16:15:11 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:29:43 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,19 @@ void	lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
+}
+
+int	ft_lstsize(t_list *lst)
+{
+	int	i;
+
+	if (!lst)
+		return (0);
+	i = 1;
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }
