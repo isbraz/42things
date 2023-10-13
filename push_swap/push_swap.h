@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:41:33 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/12 13:27:51 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:45:42 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ int	ft_strlen(const char *s);
 int	ft_atoi(char *s);
 int	*list_to_array(t_list *stack);
 int	smallest_number(int *list);
+void    ft_putstr_fd(char *s, int fd);
+
+//check functions
+int	ft_is_sorted(t_list *stack);
+int	ft_check_argv(char **argv);
+int	check_numbers(t_list *stack);
 
 //list functions
 t_list	*lstnew(int content);
