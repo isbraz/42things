@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:44:14 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/13 17:54:20 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/15 11:36:37 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,22 @@ static void	ft_create_stack(t_list **stack, char **argv)
 int	main(int ac, char **argv)
 {
 	t_list	*stack_a;
-	// t_list	*stack_b;
+	t_list	*stack_b;
 	t_list	*tmp;
 
 	stack_a = NULL;
+	stack_b = NULL;
 	if (ac < 2)
 		return (0);
 	ft_create_stack(&stack_a, argv);
 	if (!ft_check_argv(argv) || !check_numbers(stack_a))
 	{
-		printf("ft_check_argv : %d\n", ft_check_argv(argv));
-		printf("check_numbers : %d\n", check_numbers(stack_a));
 		ft_putstr_fd("Error\n", 2);
 		return (0);
 	}
 	if (ft_is_sorted(stack_a))
 		return (0);
+	sort_four_five(&stack_a, &stack_b);
 	tmp = stack_a;
 	while (tmp)
 	{
