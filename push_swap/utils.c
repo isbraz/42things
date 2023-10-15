@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:18:10 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/13 17:23:34 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/15 16:22:13 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ int	*list_to_array(t_list *stack)
 	
 	i = 0;
 	list = malloc(sizeof(int) * ft_lstsize(stack));
+	if (!list)
+		return (NULL);
 	while (stack)
 	{
 		list[i] = stack->content;
@@ -76,18 +78,23 @@ int	*list_to_array(t_list *stack)
 	return (list);
 }
 
-int	smallest_number(int *list)
+int	smallest_number(int *list, int size)
 {
 	int	i;
 	int	smallest;
+	int	small_index;
 
 	i = 0;
+	small_index = 0;
 	smallest = list[i];
-	while (list[i])
+	while (i < size)
 	{
 		if (list[i] < smallest)
-			smallest = i;
+		{
+			smallest = list[i];
+			small_index = i;
+		}
 		i++;
 	}
-	return (smallest);
+	return (small_index);
 }

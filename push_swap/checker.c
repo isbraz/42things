@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:10:11 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/15 11:26:12 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/15 15:38:35 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,14 @@ static int	ft_is_num_equal(int n, int *array)
 			f++;
 		i++;
 	}
-	if (f == 1)
+	if (f == 1 || f == 0)
 		return (0);
 	return (1);
 }
 
 int	check_numbers(t_list *stack)
 {
+	
 	int	*array;
 
 	array = list_to_array(stack);
