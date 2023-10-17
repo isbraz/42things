@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:44:14 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/16 12:47:36 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/16 14:32:57 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int ac, char **argv)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
+	t_list	*tmp;
 
 	stack_a = NULL;
 	stack_b = NULL;
@@ -48,4 +49,11 @@ int	main(int ac, char **argv)
 		sort_three(&stack_a);
 	else if (ft_lstsize(stack_a) == 4 || ft_lstsize(stack_a) == 5)
 		sort_four_five(&stack_a, &stack_b);
+	tmp = stack_a;
+	while (tmp)
+	{
+		printf("%d\n", tmp->content);
+		tmp = tmp->next;
+	}
+	
 }
