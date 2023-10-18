@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:18:10 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/15 16:22:13 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/17 16:49:03 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ int	smallest_number(int *list, int size)
 	int	i;
 	int	smallest;
 	int	small_index;
+	
 
 	i = 0;
 	small_index = 0;

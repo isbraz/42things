@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:41:33 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/15 17:02:40 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:18:34 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_atoi(char *s);
 int	*list_to_array(t_list *stack);
 int	smallest_number(int *list, int size);
 void    ft_putstr_fd(char *s, int fd);
+void	index_list(t_list **stack);
 
 //check functions
 int	ft_is_sorted(t_list *stack);
@@ -52,5 +53,6 @@ void	ft_rotate_reverse(t_list **stack, char *message);
 void	sort_two(t_list **stack);
 void	sort_three(t_list **stack_s);
 void	sort_four_five(t_list **stack_s, t_list **stack_r);
+void	ft_radix(t_list **stack_s, t_list **stack_r);
 
 #endif
