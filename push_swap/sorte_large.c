@@ -6,11 +6,26 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:24:28 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/18 17:23:12 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:30:03 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	get_max(int len)
+{
+	int	length;
+	int	max;
+
+	max = 1;
+	length = len;
+	while ((length / 2) > 0) 
+	{
+		length /= 2;
+		max++;
+	}
+	return(max);
+}
 
 void	ft_radix(t_list **stack_a, t_list **stack_b)
 {
@@ -21,15 +36,9 @@ void	ft_radix(t_list **stack_a, t_list **stack_b)
 	int	j;
 
 	index_list(stack_a);
-	max = 1;
+	len = ft_lstsize(*stack_a);
+	max = get_max(len);
 	i = -1;
-	len = ft_lstsize(*stack_a);
-	while ((len / 2) > 0) 
-	{
-		len /= 2;
-		max++;
-	}
-	len = ft_lstsize(*stack_a);
 	while (++i < max)
 	{
 		j = -1;

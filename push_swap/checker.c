@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:10:11 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/18 15:49:47 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:50:50 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,32 +19,17 @@ static int     ft_isdigit(int c)
         return (0);
 }
 
-static int	ft_is_num_equal(int n, int *array)
-{
-	int	i;
-	int	f;
-
-	i = 0;
-	f = 0;
-	while (array[i])
-	{
-		if (n == array[i])
-			f++;
-		i++;
-	}
-	if (f == 1 || f == 0)
-		return (0);
-	return (1);
-}
-
 int	check_numbers(t_list *stack)
 {
 	int	*array;
+	t_list	*tmp;
 
-	array = list_to_array(stack);
+	tmp = stack;
+	array = list_to_array(tmp);
 	while (stack)
 	{
-		if (ft_is_num_equal(stack->content, array))
+		printf("valores :%d\n", stack->content);
+		if (!ft_is_num_equal(stack->content, array))
 			return (0);
 		stack = stack->next;
 	}

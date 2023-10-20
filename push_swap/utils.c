@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:18:10 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/17 16:49:03 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:11:05 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ void    ft_putstr_fd(char *s, int fd)
         }
 }
 
-int	ft_atoi(char *s)
+long long	ft_atoi(char *s)
 {
-	int	i;
-	int	res;
-	int	sign;
+	long long	i;
+	long long	res;
+	long long	sign;
 
 	i = 0;
 	res = 0;
@@ -56,6 +56,11 @@ int	ft_atoi(char *s)
 		res *= 10;
 		res += s[i] - 48;
 		i++;
+	}
+	if ((res * sign) > INT_MAX || (res * sign) < INT_MIN)
+	{
+		ft_putstr_fd("Error\n", 2);
+		exit(EXIT_FAILURE);
 	}
 	return (sign * res);
 }

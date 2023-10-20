@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:00:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/17 18:31:50 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:45:22 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,19 @@ void	index_list(t_list **stack)
 		tmp = tmp->next;
 	}
 	free(array);
+}
+
+void	ft_lstclear(t_list **lst)
+{
+	t_list	*tmp;
+	
+	if (!*lst)
+		return ;
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		free(*lst);
+		*lst = tmp;
+	}
+	*lst = NULL;
 }

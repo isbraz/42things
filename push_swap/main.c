@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:44:14 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/18 16:46:25 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:52:36 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,6 @@ int	main(int ac, char **argv)
 	if (ac < 2)
 		return (0);
 	ft_create_stack(&stack_a, argv);
-	if (!ft_check_argv(argv) || !check_numbers(stack_a))
-	{
-		ft_putstr_fd("Error\n", 2);
-		return (0);
-	}
 	if (ft_is_sorted(stack_a))
 		return (0);
 	if (ft_lstsize(stack_a) == 2)
@@ -50,4 +45,6 @@ int	main(int ac, char **argv)
 		sort_four_five(&stack_a, &stack_b);
 	else if (ft_lstsize(stack_a) > 5)
 		ft_radix(&stack_a, &stack_b);
+	ft_lstclear(&stack_a);
+	ft_lstclear(&stack_b);
 }

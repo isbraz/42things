@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:41:33 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/17 17:18:34 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:46:54 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -25,7 +26,7 @@ typedef struct s_list
 
 //utils functions
 int	ft_strlen(const char *s);
-int	ft_atoi(char *s);
+long long	ft_atoi(char *s);
 int	*list_to_array(t_list *stack);
 int	smallest_number(int *list, int size);
 void    ft_putstr_fd(char *s, int fd);
@@ -39,9 +40,10 @@ int	check_numbers(t_list *stack);
 //list functions
 t_list	*lstnew(int content);
 void	lstadd_back(t_list **lst, t_list *new);
-void	lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst);
 t_list	*lstlast(t_list *lst);
 int	ft_lstsize(t_list *lst);
+void	lstadd_front(t_list **lst, t_list *new);
 
 //moves functions
 void	ft_swap(t_list **stack, char *message);
