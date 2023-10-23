@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:41:33 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/20 16:46:54 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:58:30 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	index_list(t_list **stack);
 //check functions
 int	ft_is_sorted(t_list *stack);
 int	ft_check_argv(char **argv);
-int	check_numbers(t_list *stack);
+int	check_num(t_list *stack);
 
 //list functions
 t_list	*lstnew(int content);

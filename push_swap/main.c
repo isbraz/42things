@@ -6,11 +6,13 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:44:14 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/20 17:52:36 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/23 16:08:26 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	exit_function(t_l)
 
 static void	ft_create_stack(t_list **stack, char **argv)
 {
@@ -31,10 +33,11 @@ int	main(int ac, char **argv)
 	t_list	*stack_b;
 
 	stack_a = NULL;
-	stack_b = NULL;
+	stack_b = NULL;fh
 	if (ac < 2)
 		return (0);
 	ft_create_stack(&stack_a, argv);
+	
 	if (ft_is_sorted(stack_a))
 		return (0);
 	if (ft_lstsize(stack_a) == 2)

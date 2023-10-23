@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:10:11 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/20 17:50:50 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:57:48 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,26 @@ static int     ft_isdigit(int c)
         return (0);
 }
 
-int	check_numbers(t_list *stack)
+int	check_num(t_list *stack)
 {
-	int	*array;
-	t_list	*tmp;
+	t_list	*current;
+	t_list	*runner;
 
-	tmp = stack;
-	array = list_to_array(tmp);
-	while (stack)
+	current = stack;
+	while (current)
 	{
-		printf("valores :%d\n", stack->content);
-		if (!ft_is_num_equal(stack->content, array))
-			return (0);
-		stack = stack->next;
+		runner = current->next;
+		while (runner)
+		{
+			if (current->content == runner->content)
+			{
+				return (1);
+			}
+			runner = runner->next;
+		}
+		current = current->next;
 	}
-	free(array);
-	return (1);
+	return (0);
 }
 
 int	ft_is_sorted(t_list *stack)
