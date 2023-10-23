@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:00:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/20 16:45:22 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/23 17:40:45 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../.include/push_swap.h"
 
 void	bubble_sort(int *array, int length)
 {
@@ -65,8 +65,8 @@ static void	get_indexes(int *array, int length)
 void	index_list(t_list **stack)
 {
 	t_list	*tmp;
-	int	*array;
-	int	i;
+	int		*array;
+	int		i;
 
 	array = list_to_array(*stack);
 	get_indexes(array, ft_lstsize(*stack));
@@ -83,7 +83,7 @@ void	index_list(t_list **stack)
 void	ft_lstclear(t_list **lst)
 {
 	t_list	*tmp;
-	
+
 	if (!*lst)
 		return ;
 	while (*lst)

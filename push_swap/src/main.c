@@ -6,13 +6,26 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:44:14 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 16:08:26 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/23 17:41:14 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../.include/push_swap.h"
 
-static void	exit_function(t_l)
+static void	exit_function(t_list **stack_a, int flag)
+{
+	if (flag == 0)
+	{
+		ft_putstr_fd("Error\n", 2);
+		ft_lstclear(stack_a);
+		exit(EXIT_FAILURE);
+	}
+	if (flag == 1)
+	{
+		ft_lstclear(stack_a);
+		exit(EXIT_FAILURE);
+	}
+}
 
 static void	ft_create_stack(t_list **stack, char **argv)
 {
@@ -33,13 +46,14 @@ int	main(int ac, char **argv)
 	t_list	*stack_b;
 
 	stack_a = NULL;
-	stack_b = NULL;fh
+	stack_b = NULL;
 	if (ac < 2)
 		return (0);
 	ft_create_stack(&stack_a, argv);
-	
+	if (!ft_check_argv(argv) || check_num(stack_a))
+		exit_function(&stack_a, 0);
 	if (ft_is_sorted(stack_a))
-		return (0);
+		exit_function(&stack_a, 1);
 	if (ft_lstsize(stack_a) == 2)
 		sort_two(&stack_a);
 	else if (ft_lstsize(stack_a) == 3)
@@ -50,4 +64,5 @@ int	main(int ac, char **argv)
 		ft_radix(&stack_a, &stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
+	exit(EXIT_SUCCESS);
 }

@@ -6,16 +6,16 @@
 #    By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 14:46:17 by isbraz-d          #+#    #+#              #
-#    Updated: 2023/10/17 17:06:53 by isbraz-d         ###   ########.fr        #
+#    Updated: 2023/10/23 17:43:06 by isbraz-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	push_swap
 
-CFLAGS	=	#-Wall #-Wextra -Werror 
+CFLAGS	=	-Wall -Wextra -Werror 
 
-SRCS	= 	main.c moves.c list_utils.c utils.c sorte_little.c checker.c \
-		sorte_large.c utils2.c
+SRCS	= 	src/main.c src/moves.c src/list_utils.c src/utils.c src/sorte_little.c src/checker.c \
+		src/sorte_large.c src/utils2.c
 
 OBJS	=	$(SRCS:%.c=%.o)
 

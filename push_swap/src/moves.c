@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:46:41 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/15 17:11:32 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/23 17:41:18 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../.include/push_swap.h"
 
 void	ft_swap(t_list **stack, char *message)
 {
@@ -61,7 +61,7 @@ void	ft_rotate_reverse(t_list **stack, char *message)
 	first = *stack;
 	last = lstlast(*stack);
 	while (first->next->next)
-		first= first->next;
+		first = first->next;
 	first->next = NULL;
 	lstadd_front(stack, last);
 	ft_putstr_fd(message, 1);
