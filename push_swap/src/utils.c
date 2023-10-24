@@ -6,22 +6,26 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:18:10 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 17:41:29 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:28:55 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.include/push_swap.h"
+#include "../include/push_swap.h"
 
 int	ft_strlen(const char *s)
 {
 	int	i;
+	int	j;
 
 	i = 0;
+	j = 0;
 	if (s == NULL)
 		return (0);
+	while (s[j] == '0' && s[j] != '\0')
+		j++;
 	while (s[i] != '\0')
 		i++;
-	return (i);
+	return (i - j);
 }
 
 void	ft_putstr_fd(char *s, int fd)
@@ -57,7 +61,7 @@ long long	ft_atoi(char *s)
 		res += s[i] - 48;
 		i++;
 	}
-	if ((res * sign) > INT_MAX || (res * sign) < INT_MIN)
+	if ((res * sign) > INT_MAX || (res * sign) < INT_MIN || ft_strlen(s) > 11)
 	{
 		ft_putstr_fd("Error\n", 2);
 		exit(EXIT_FAILURE);

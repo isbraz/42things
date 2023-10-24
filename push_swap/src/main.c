@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:44:14 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 17:41:14 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:22:54 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.include/push_swap.h"
+#include "../include/push_swap.h"
 
 static void	exit_function(t_list **stack_a, int flag)
 {
@@ -33,6 +33,11 @@ static void	ft_create_stack(t_list **stack, char **argv)
 
 	i = 2;
 	*stack = lstnew(ft_atoi(argv[1]));
+	if (!*stack)
+	{
+		ft_putstr_fd("Error\n", 2);
+		exit(EXIT_FAILURE);
+	}
 	while (argv[i])
 	{
 		lstadd_back(stack, lstnew(ft_atoi(argv[i])));

@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:10:11 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 17:40:58 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:23:01 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.include/push_swap.h"
+#include "../include/push_swap.h"
 
 static int	ft_isdigit(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:00:50 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 17:40:45 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:23:29 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	bubble_sort(int *array, int length)
 {

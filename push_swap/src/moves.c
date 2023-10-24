@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:46:41 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 17:41:18 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:23:13 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	ft_swap(t_list **stack, char *message)
 {

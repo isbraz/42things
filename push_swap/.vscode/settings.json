@@ -2,6 +2,8 @@
 	"files.associations": {
 		"libft.h": "c",
 		"type_traits": "c",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"stdlib.h": "c",
+		"stddef.h": "c"
 	}
 }

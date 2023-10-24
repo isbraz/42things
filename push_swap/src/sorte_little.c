@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 14:51:53 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 17:41:26 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:23:20 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.include/push_swap.h"
+#include "../include/push_swap.h"
 
 static void	moves_five(t_list **stack_s, t_list **stack_r, int pos_small)
 {

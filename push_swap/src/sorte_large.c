@@ -6,11 +6,11 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:24:28 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/23 17:41:23 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:23:16 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.include/push_swap.h"
+#include "../include/push_swap.h"
 
 static int	get_max(int len)
 {
