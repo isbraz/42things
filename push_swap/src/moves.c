@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 16:46:41 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/24 14:23:13 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:54:27 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_swap(t_list **stack, char *message)
 	tmp = *stack;
 	*stack = (*stack)->next;
 	tmp->next = (*stack)->next;
-	(*stack)->next = tmp;
+	(*stack)->next = tmp; 
 	ft_putstr_fd(message, 1);
 }
 

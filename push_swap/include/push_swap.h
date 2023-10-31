@@ -6,7 +6,7 @@
 /*   By: isbraz-d <isbraz-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 15:41:33 by isbraz-d          #+#    #+#             */
-/*   Updated: 2023/10/24 14:22:10 by isbraz-d         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:35:42 by isbraz-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <limits.h>
 
 typedef struct s_list
