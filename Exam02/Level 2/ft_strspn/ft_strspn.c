@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -22,4 +23,9 @@ size_t	ft_strspn(const char *s, const char *accept)
 		++i;
 	}
 	return (i);
+}
+
+int main()
+{
+	printf("%li\n", ft_strspn("ola", "zzz"));
 }

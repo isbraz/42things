@@ -18,3 +18,8 @@ size_t  ft_strcspn(const char *s, const char *reject)
     }
     return (i);
 }
+
+int main()
+{
+	printf("%li\n", ft_strcspn("abc", "zzc"));
+}
