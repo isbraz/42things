@@ -10,7 +10,7 @@ char *ft_itoa(int nbr)
 	if (nbr <= 0)
 	{
 		len++;
-    	}
+    }
 	while (n) 
 	{
 		n /= 10;

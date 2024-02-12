@@ -21,5 +21,5 @@ size_t  ft_strcspn(const char *s, const char *reject)
 
 int main()
 {
-	printf("%li\n", ft_strcspn("abc", "zzc"));
+	printf("%li\n", ft_strcspn("olbaaa", "dce"));
 }
