@@ -34,7 +34,6 @@ int is_whitespace(char c)
 // 	strs = ;
 // }
 
-
 void ft_word(char *str, int counter)
 {
 	int i = 0;
@@ -46,11 +45,10 @@ void ft_word(char *str, int counter)
 		str++;
 	while (str[i] && !is_whitespace(str[i]))
 		i++;
-	ft_word(str + i, counter + 1);
-	write(1, str, i);
-	// printf("%d:  ", counter);
 	if (counter > 0 && i)
 		write(1, " ", 1);
+	write(1, str, i);
+	ft_word(str + i, counter + 1);
 }
 
 int main(int ac, char **av)

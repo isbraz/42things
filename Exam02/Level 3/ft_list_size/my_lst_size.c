@@ -16,22 +16,31 @@ t_list	*lst_new(int test)
 
 void	lst_add_back(t_list **lst ,t_list *add)
 {
+	t_list *current;
+
+	current = *lst;
 	if (!*lst)
 	{
 		*lst = add;
 		return ;
 	}
-	while ((*lst)->next)
-	{
-		*lst = (*lst)->next;
-	}
-	*lst = add;
+	while (current->next)
+		current= current->next;
+	current->next = add;
 }
 
+void print_list(t_list *teste)
+{
+	while (teste)
+	{
+		printf("%d\n", teste->data);
+		teste = teste->next;
+	}
+}
 
 int	ft_list_size(t_list *begin_list)
 {
-	int	i = 1;
+	int	i = 0;
 
 	if (!begin_list)
 		return (0);
@@ -47,7 +56,9 @@ int	main()
 {
 	t_list *test;
 
-	test = lst_new(28);
+	test = NULL;
 	lst_add_back(&test, lst_new(29));
-	printf("%d\n", ft_list_size(test));
+	lst_add_back(&test, lst_new(29));
+	print_list(test);
+	printf("size: %d\n", ft_list_size(test));
 }
